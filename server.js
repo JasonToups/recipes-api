@@ -3,11 +3,16 @@ const express = require('express');
 const PORT = process.env.PORT || 4000;
 const app = express();
 
-// --------------------------- Routes
+// --------------------------- MIDDLEWARE --------------------------- //
+// run on all paths
+// looks for the whole current directory path, then goes to the public directory
+app.use(express.static(__dirname + '/public'))
+
+// --------------------------- Routes --------------------------- //
 
 app.get('/', (req, res) => {
   console.log('Home Route');
-
+  res.sendStatus(200);
 });
 
 // Start Server (Listen for Requests)

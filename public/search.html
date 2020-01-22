@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Recipe Search JS -->
+    <script defer src="js/recipeSearch.js"></script>
+    <!-- Main JS -->
+    <script defer src="js/app.js"></script>
+    <title>Recipes</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-5">
+      <div class="container">
+        <a class="navbar-brand" href="/">Recipes</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarsExample07"
+          aria-controls="navbarsExample07"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExample07">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/search.html">Search Recipes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about.html">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container">
+      <section class="row mb-5">
+        <div class="col-md-12">
+          <h2>Find Your Favorite Dish</h2>
+          <form id="searchForm">
+            <div class="form-group">
+              <label for="query">Search Term</label>
+              <input
+                class="form-control form-control-lg"
+                type="text"
+                id="query"
+                name="query"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary float-right">
+              Search Now
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <section id="results" class="row"></section>
+      <!-- /container -->
+    </main>
+  </body>
+</html>
